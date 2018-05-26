@@ -4,12 +4,10 @@ one:
   title: MyString
   body: MyText
   category_id: 1
-  author_id: MyString
-  integer: MyString
+  admin_user_id: MyString
 
 two:
   title: MyString
   body: MyText
   category_id: 1
-  author_id: MyString
-  integer: MyString
+  admin_user_id: MyString
