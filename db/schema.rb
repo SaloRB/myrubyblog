@@ -57,9 +57,9 @@ ActiveRecord::Schema.define(version: 20180526070009) do
     t.string "title"
     t.text "body"
     t.integer "category_id"
-    t.string "admin_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "admin_user_id"
   end
 
 end
