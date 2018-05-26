@@ -1,18 +1,22 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
-  
+
+  get 'pages/about'
+  get 'pages/contact'
+  get 'pages/resources'
   get 'categories/index'
-
   get 'categories/edit'
-
   get 'categories/new'
-
   get 'categories/show'
-
-	root 'welcome#index'
+	
+  root 'welcome#index'
 
 	resources :posts
 	resources :categories
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  get 'about' => 'pages#about'
+  get 'contact' => 'pages#contact'
+  get 'resources' => 'pages#resources'
+
   ActiveAdmin.routes(self)
 end
