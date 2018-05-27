@@ -1,3 +1,4 @@
+<% content_for(:title, @post.title)%>
 <div class="post">
 	<h1><%= @post.title %></h1>
 	<small><%= @post.created_at.strftime("%d %b. %Y") %></small>

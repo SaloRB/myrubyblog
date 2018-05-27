@@ -1,4 +1,26 @@
+<!DOCTYPE html>
+<html>
 <%= render "partials/header" %>
+  <body>
+    <div id="wrapper">
+      <div id="header-wrapper">
+        <div id="header">
+          <div id="logo">
+            <h1><a href="#">My Ruby Blog</a></h1>
+            <p>Learning Ruby on Rails</p>
+          </div>
+          <div id="menu">
+            <ul class="main-nav">
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "About", about_path %></li>
+              <li><%= link_to "Blog", posts_path %></li>
+              <li><%= link_to "Contact", contact_path %></li>
+              <li><%= link_to "Resources", resources_path %></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
       <div id="page">
         <div id="page-bgtop">
           <div id="page-bgbtm">
@@ -18,9 +40,7 @@
         </div>
       </div>
       <!-- end #page -->
-      <div id="footer">
-        <p>&copy; 2013, My Ruby Blog - Sample Project</p>
-      </div>
+      <%= render "partials/footer" %>
     </div>
   </body>
 </html>
