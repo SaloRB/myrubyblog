@@ -3,9 +3,9 @@ ActiveAdmin.register_page "Dashboard" do
         columns do
             column do
                 panel "Recent Posts" do
-                    table_for Post.order("id desc").limit(5) do
-                        column :id
-                        column "Post Title", :title do |post|
+                    table_for Post.order("id desc").limit(20) do
+                        # column :id
+                        column "Title", :title do |post|
                             link_to post.title, [:admin, post]
                         end
                         column "Author", :admin_user
@@ -18,9 +18,9 @@ ActiveAdmin.register_page "Dashboard" do
 
             column do
                 panel "Categories" do
-                    table_for Category.order("id desc").limit(5) do
-                        column :id
-                        column "Category Name", :name do |category|
+                    table_for Category.order("id").limit(20) do
+                        # column :id
+                        column "Name", :name do |category|
                             link_to category.name, [:admin, category]
                         end
                         column :created_at
@@ -32,7 +32,7 @@ ActiveAdmin.register_page "Dashboard" do
         columns do
             column do
                 panel "Messages" do
-                    table_for Message.order("id desc").limit(5) do
+                    table_for Message.order("id desc").limit(20) do
                         column :name do |message|
                             link_to message.name, [:admin, message]
                         end
