@@ -1,5 +1,25 @@
 <% content_for(:title, 'Contact')%>
 <div class="post">
-	<h1>Pages#contact</h1>
-	<p>Find me in app/views/pages/contact.html.erb</p>
+	<h1>Contact us!</h1>
+	<p>Please leave a message and we'll get in contact with you</p>
+	<%= form_for @message do |f| %>
+		<p>
+			<%= f.label :name %><br />
+			<%= f.text_field :name %><br />
+		</p>
+
+		<p>
+			<%= f.label :email %><br />
+			<%= f.text_field :email %><br />
+		</p>
+
+		<p>
+			<%= f.label "Message" %><br />
+			<%= f.text_area :body %><br />
+		</p>
+
+		<p>
+			<%= f.submit "Send Message" %><br />
+		</p>
+	<% end %>
 </div>

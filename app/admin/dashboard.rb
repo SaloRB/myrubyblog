@@ -28,12 +28,21 @@ ActiveAdmin.register_page "Dashboard" do
                     strong (link_to "Show All Categories", :admin_categories)
                 end
             end
-
-            # column do
-            #     panel "Info" do
-            #         para "Welcome to ActiveAdmin."
-            #     end
-            # end
+        end
+        columns do
+            column do
+                panel "Messages" do
+                    table_for Message.order("id desc").limit(5) do
+                        column :name do |message|
+                            link_to message.name, [:admin, message]
+                        end
+                        column :email
+                        column "Message", :body
+                        column :created_at
+                    end
+                    strong (link_to "Show All Messages", :admin_messages)
+                end
+            end
         end
     end # content
 end
