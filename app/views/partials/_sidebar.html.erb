@@ -1,13 +1,11 @@
 <div id="sidebar">
               <ul>
                 <li>
-                  <div id="search" >
-                    <form method="get" action="#">
-                      <div>
-                        <input type="text" name="s" id="search-text" value="" />
-                        <input type="submit" id="search-submit" value="GO" />
-                      </div>
-                    </form>
+                  <div id="search">
+                    <%= search_form_for @q do |f| %>
+                      <%= f.search_field :title_or_body_cont %>
+                      <%= f.submit "GO" %>
+                    <% end %>                    
                   </div>
                   <div style="clear: both;">&nbsp;</div>
                 </li>

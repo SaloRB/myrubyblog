@@ -35,6 +35,7 @@ gem 'activeadmin'
 gem 'devise'
 gem 'jquery-rails'
 gem 'coffee-script-source', '1.8.0'
+gem 'ransack'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
