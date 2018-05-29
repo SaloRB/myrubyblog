@@ -2,11 +2,11 @@
 <% if @posts.each do |post| %>
 	<div class="post">
 		<h2 class="title"><%= link_to post.title, post %></h2>
-		<div class="entry"><%= post.body %></div>
+		<div class="entry"><%= truncate(post.body, :length => 150) %></div>
 		<div class="byline">
 			<p class="meta"><%= post.created_at.strftime("%B %d, %Y") %> Posted by <%= post.admin_user.name %></p>
 			<p class="links"><%= link_to "Read More", post %></p>
-        </div>
+    </div>
 	</div>
 <% end.empty? %>
 	<p style="color:#ffffff">Sorry, there are no posts in this category</p>
