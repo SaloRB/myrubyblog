@@ -7,7 +7,9 @@ class PostTest < ActiveSupport::TestCase
 	# end
 
 	test "If body is long enough" do
-		post = Post.new(:title => "Title", :body => "This a valid body")
-		assert post.valid?
+		post = Post.new
+		post.category_id = 1
+		post.admin_user_id = 1
+		assert post.save
 	end
 end

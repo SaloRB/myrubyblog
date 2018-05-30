@@ -1,4 +1,4 @@
-<% content_for(:title, @category.name)%>
+<% content_for(:title, @title)%>
 <% if @posts.each do |post| %>
 	<div class="post">
 		<h2 class="title"><%= link_to post.title, post %></h2>
@@ -9,5 +9,5 @@
     </div>
 	</div>
 <% end.empty? %>
-	<p style="color:#ffffff">Sorry, there are no posts in this category</p>
+	<p style="color:#FFFFFF">Sorry, there are no posts in this category</p>
 <% end %>
