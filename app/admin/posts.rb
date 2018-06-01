@@ -2,6 +2,7 @@ ActiveAdmin.register Post do
 	menu :label => "Blog Posts"
 	permit_params :category_id, :title, :body, :admin_user_id
 	index do
+		selectable_column
 		column :title
 		column "Author",:admin_user
 		column :category
