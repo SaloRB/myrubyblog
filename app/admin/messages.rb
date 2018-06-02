@@ -1,4 +1,5 @@
 ActiveAdmin.register Message do
+	menu priority: 4
 	permit_params :name, :email, :body
 	index do
 		selectable_column

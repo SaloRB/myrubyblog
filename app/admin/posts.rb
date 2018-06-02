@@ -1,8 +1,10 @@
 ActiveAdmin.register Post do
-	menu :label => "Blog Posts"
+
+	menu label: "Blog Posts", priority: 2
 	permit_params :category_id, :title, :body, :admin_user_id
 	index do
 		selectable_column
+		column :id
 		column :title
 		column "Author",:admin_user
 		column :category
