@@ -1,5 +1,5 @@
 <% content_for(:title, 'Home')%>
-<% @posts.each do |post| %>
+<% @posts.order("id asc").each do |post| %>
 	<div class="post">
 		<h2 class="title"><%= link_to post.title, post %></h2>
 		<div class="entry"><%= truncate(post.body, :length => 150) %></div>
