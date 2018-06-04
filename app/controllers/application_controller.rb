@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def site_search
-	@q = Post.ransack(params[:q])
-	@search_posts = @q.result(distinct: true)
+    @q = Post.ransack(params[:q])
+    @search_posts = @q.result(distinct: true)
   end
 end

@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 	def index
 		@q = Post.ransack(params[:q])
 		@posts = @q.result(distinct: true)
+		@comments = PostComment.all.group_by(&:post_id)
 	end
 
 	def show
