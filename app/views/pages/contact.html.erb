@@ -5,17 +5,17 @@
 	<%= form_for @message do |f| %>
 		<p>
 			<%= f.label :name %><br />
-			<%= f.text_field :name %><br />
+			<%= f.text_field :name, placeholder: "Please enter your name", required: true %><br />
 		</p>
 
 		<p>
 			<%= f.label :email %><br />
-			<%= f.text_field :email %><br />
+			<%= f.text_field :email, placeholder: "Please enter your email" %><br />
 		</p>
 
 		<p>
 			<%= f.label "Message" %><br />
-			<%= f.text_area :body %><br />
+			<%= f.text_area :body, size: "22x10", placeholder: "Please enter your message", required: true %><br />
 		</p>
 
 		<p>
