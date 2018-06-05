@@ -9,7 +9,7 @@
 	<p>Category: <%= link_to @post.category.name,category_path(:id => @post.category.id) %></p>
 	<p><%= link_to "Back", posts_path %></p>
 	<hr />
-	<h3>Add a Comment</h3>
+	<h3><a id="comments">Add a Comment</a></h3>
 	<%= form_for @post_comment do |f| %>
 		<%= f.hidden_field :post_id %>
 

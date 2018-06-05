@@ -59,6 +59,11 @@ a {
 	color: #D93544;
 }
 
+#comments{
+	text-decoration: none;
+	color: #2B2522;
+}
+
 a:hover {
 	text-decoration: none;
 }
